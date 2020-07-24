@@ -1,0 +1,28 @@
+@import "../base/manifest", "../helpers/manifest";
+
+.logo-container {
+  @include flexRow();
+  @include flexCenter();
+  color: $primary;
+  .logo-text {
+    font-weight: bolder;
+    font-size: $md;
+    span {
+      color: $secondary;
+    }
+  }
+  .logo-img {
+    margin-left: 0.6em;
+    height: 2em;
+    object-fit: contain;
+  }
+  .logo-text-sm {
+    font-weight: bolder;
+    font-size: $sm;
+  }
+  .logo-img-sm {
+    margin-left: 0.6em;
+    height: 1.5em;
+    object-fit: contain;
+  }
+}

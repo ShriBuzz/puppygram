@@ -1,0 +1,31 @@
+@mixin flexRow {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin spaceBetweenCenter {
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin spaceBetweenBaseline {
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+@mixin centerBaseline {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+
+@mixin iconSize {
+  height: 1em;
+  object-fit: contain;
+}

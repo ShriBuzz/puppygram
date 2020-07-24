@@ -1,0 +1,15 @@
+@import "../helpers/variables";
+
+button {
+  background-color: $secondary;
+  color: white;
+  font-size: $sm;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+button:hover {
+  color: rgba(255, 255, 255, 1);
+  box-shadow: 0 5px 15px rgba(245, 154, 35, 0.4);
+}

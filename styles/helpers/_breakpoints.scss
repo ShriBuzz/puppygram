@@ -1,0 +1,34 @@
+//Breakpoint-mixin
+$sm-device: 576px;
+$md-device: 768px;
+$lg-device: 992px;
+$xl-device: 1200px;
+
+@mixin mq($break) {
+  @if $break == "xs" {
+    //lowest breakpoint value
+    @content;
+  } @else if $break == "sm" {
+    // phone
+    @media (min-width: $sm-device) {
+      @content;
+    }
+  } @else if $break == "md" {
+    // tablet
+    @media (min-width: $md-device) {
+      @content;
+    }
+  } @else if $break == "lg" {
+    // laptop and desktop
+    @media (min-width: $lg-device) {
+      @content;
+    }
+  } @else if $break == "xl" {
+    // High res desktop and TVs
+    @media (min-width: $xl-device) {
+      @content;
+    }
+  } @else {
+    @error "No value could be retrieved for '#{$break}'";
+  }
+}

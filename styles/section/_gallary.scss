@@ -1,0 +1,45 @@
+@import "../base/manifest", "../helpers/manifest";
+
+.gallary-body {
+  @include flexCenter();
+  width: 100%;
+}
+
+.gallary-container {
+  width: 80%;
+  border-bottom: 1.5px solid $light-grey;
+  margin-bottom: 1em;
+  h1 {
+    color: $primary;
+  }
+  .image-grid {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 1em;
+  }
+  //   .img-container {
+  //     width: 350px;
+  //     height: auto;
+  //   }
+
+  .gallary-image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  p {
+    color: $grey;
+    font-weight: 700;
+    text-align: center;
+  }
+  .select-showing {
+    @include flexRow();
+    @include flexCenter();
+    padding-bottom: 1em;
+    p {
+      font-weight: normal;
+      margin-right: 0.5em;
+    }
+  }
+}

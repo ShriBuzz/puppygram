@@ -1,0 +1,36 @@
+@import "../base/manifest", "../helpers/manifest";
+
+.footer-nav {
+  @include flexRow();
+  @include flexCenter();
+
+  ul {
+    width: 40%;
+    // margin: 0;
+    @include flexRow();
+    flex-wrap: wrap;
+    @include centerBaseline();
+  }
+  li {
+    color: $primary;
+    @include flexCenter();
+    @include centerBaseline();
+  }
+  .bullet-point::after {
+    content: "•";
+    // font-size: 3em;
+    // vertical-align: middle;
+    padding: 0 0.8em;
+  }
+}
+
+.footer-copyright {
+  margin: 0;
+  @include flexRow();
+  @include flexCenter();
+  .copyright-text {
+    font-size: $sm;
+    color: $light-grey;
+    margin-left: 1em;
+  }
+}
