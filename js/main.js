@@ -12,6 +12,13 @@ const uploadBtn = document.querySelector(".upload-btn");
 const uploadView = document.querySelector("#upload-view");
 const uploadCloseBtn = document.querySelector("#upload-close");
 
+// delete
+const deleteCloseBtn = document.querySelectorAll(".delete-btn");
+const deleteView = document.querySelector("#delete-view");
+const confirmBtn = document.querySelector("#confirm-delete");
+const cancelBtn = document.querySelector("#cancel-delete");
+let toDeleteNode;
+
 // form
 const selectBtn = document.querySelector(".choose-btn");
 const inputImage = document.querySelector("#file");
@@ -39,12 +46,29 @@ uploadBtn.addEventListener("click", function () {
   uploadView.style.visibility = "visible";
 });
 
+confirmBtn.addEventListener("click", function () {
+  toDeleteNode.remove();
+  fadeOut(deleteView);
+});
+
+cancelBtn.addEventListener("click", function () {
+  fadeOut(deleteView);
+});
+
 image.forEach((element) => {
   element.addEventListener("click", function () {
     newSource = element.getAttribute("src");
     cardImage.src = newSource;
     fadeIn(detailView);
     detailView.style.visibility = "visible";
+  });
+});
+
+deleteCloseBtn.forEach((element) => {
+  element.addEventListener("click", function (e) {
+    toDeleteNode = element.parentElement;
+    fadeIn(deleteView);
+    deleteView.style.visibility = "visible";
   });
 });
 
@@ -60,6 +84,7 @@ document.onkeydown = function (evt) {
   if (isEscape) {
     fadeOut(detailView);
     fadeOut(uploadView);
+    fadeOut(deleteView);
   }
 };
 
@@ -94,7 +119,6 @@ form.addEventListener("submit", (e) => {
       if (sum.toString().length > 1) {
         number = sum.toString();
       } else {
-        console.log(sum);
         break;
       }
     }
