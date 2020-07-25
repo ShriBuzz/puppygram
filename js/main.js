@@ -2,6 +2,7 @@
 const gallary = document.querySelector(".image-grid");
 const cardImage = document.querySelector(".card-image");
 const image = gallary.querySelectorAll(".gallary-image");
+const overlay = gallary.querySelectorAll(".gallary-overlay");
 
 // detail popup
 const detailView = document.querySelector("#detail-view");
@@ -55,9 +56,9 @@ cancelBtn.addEventListener("click", function () {
   fadeOut(deleteView);
 });
 
-image.forEach((element) => {
+overlay.forEach((element) => {
   element.addEventListener("click", function () {
-    newSource = element.getAttribute("src");
+    newSource = element.nextElementSibling.getAttribute("src");
     cardImage.src = newSource;
     fadeIn(detailView);
     detailView.style.visibility = "visible";
@@ -65,8 +66,10 @@ image.forEach((element) => {
 });
 
 deleteCloseBtn.forEach((element) => {
+  let parent = element.parentElement;
   element.addEventListener("click", function (e) {
-    toDeleteNode = element.parentElement;
+    e.stopPropagation();
+    toDeleteNode = parent.parentElement;
     fadeIn(deleteView);
     deleteView.style.visibility = "visible";
   });

@@ -1371,6 +1371,10 @@ input[type="number"] {
   }
 }
 
+span > * {
+  pointer-events: none;
+}
+
 .img-container {
   height: auto;
   position: relative;
@@ -1382,6 +1386,7 @@ input[type="number"] {
   position: absolute;
   top: 10px;
   right: 10px;
+  padding: 5px;
   cursor: pointer;
 }
 
@@ -1391,6 +1396,10 @@ input[type="number"] {
   }
 }
 
+.img-container:hover .gallary-overlay {
+  opacity: 1;
+}
+
 .img-container:hover span::before {
   opacity: 1;
 }
@@ -1398,9 +1407,20 @@ input[type="number"] {
 .gallary-image {
   width: 100%;
   height: 100%;
-  cursor: pointer;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.gallary-overlay {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .loader-container {
