@@ -1,6 +1,6 @@
 // Gallary
-const cardImage = document.querySelector(".card-image");
 const gallary = document.querySelector(".image-grid");
+const cardImage = document.querySelector(".card-image");
 const image = gallary.querySelectorAll(".gallary-image");
 
 // detail popup
@@ -13,18 +13,18 @@ const uploadView = document.querySelector("#upload-view");
 const uploadCloseBtn = document.querySelector("#upload-close");
 
 // delete
-const deleteCloseBtn = document.querySelectorAll(".delete-btn");
 const deleteView = document.querySelector("#delete-view");
-const confirmBtn = document.querySelector("#confirm-delete");
 const cancelBtn = document.querySelector("#cancel-delete");
+const confirmBtn = document.querySelector("#confirm-delete");
+const deleteCloseBtn = document.querySelectorAll(".delete-btn");
 let toDeleteNode;
 
 // form
-const selectBtn = document.querySelector(".choose-btn");
 const inputImage = document.querySelector("#file");
-const previewImage = document.querySelector("#preview-img");
-const secretId = document.querySelector("#secretId");
 const form = document.querySelector("#uploadForm");
+const secretId = document.querySelector("#secretId");
+const selectBtn = document.querySelector(".choose-btn");
+const previewImage = document.querySelector("#preview-img");
 let uploadSrc;
 
 // Click events
