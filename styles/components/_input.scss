@@ -1,0 +1,15 @@
+@import "../base/manifest", "../helpers/manifest";
+
+.custom-input,
+textarea {
+  border: 1.5px solid $light-grey;
+  border-radius: $radius;
+  width: 100% !important;
+  height: 2em;
+  margin: 0.5em auto;
+  padding: 4px 9px;
+  color: black;
+  ::placeholder {
+    color: $light-grey;
+  }
+}
