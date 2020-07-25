@@ -21,6 +21,9 @@
     a {
       color: $primary;
     }
+    a:hover {
+      color: $secondary;
+    }
   }
   .bullet-point::after {
     content: "•";
