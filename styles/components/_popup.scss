@@ -1,23 +1,26 @@
 @import "../base/manifest", "../helpers/manifest";
 
+#detail-view {
+  visibility: hidden;
+  // visibility: visible;
+}
+
 .popup {
   position: fixed;
   top: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-  visibility: hidden;
   transition: 0.5s;
 }
 
 .main-container {
   width: 30%;
-  min-width: 330px;
-  background-color: rgba(0, 0, 0, 0.5);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  min-width: 290px;
+  @include absoluteCenter();
+  @include mq(ph) {
+    min-width: 330px;
+  }
 }
 
 .card {
@@ -35,10 +38,19 @@
   }
 }
 
-.card-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.current-img {
+  height: 330px;
+  @include mq(lg) {
+    height: 350px;
+  }
+  @include mq(xl) {
+    height: 390px;
+  }
+  .card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }
 
 .card-text {
@@ -50,11 +62,14 @@
   }
   .description {
     margin-top: 0.5em;
-    width: 195px;
+    width: 180px;
     border-right: 1px solid $grey;
     padding-right: 0.5em;
     @include mq(xl) {
       width: 275px;
+    }
+    @include mq(ph) {
+      width: 195px;
     }
   }
 }
@@ -82,4 +97,18 @@
 .fade-in {
   opacity: 0;
   animation: fadeIn 0.4s ease-in 1 forwards;
+}
+
+.close-btn {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: -30px;
+  cursor: pointer;
+
+  .close-icon::before {
+    color: white;
+    font-size: 20px;
+    margin: 0;
+  }
 }

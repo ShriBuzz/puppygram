@@ -43,11 +43,18 @@
     p {
       color: $primary;
     }
+    .plus-icon::before {
+      color: $primary;
+    }
   }
   .plus-icon {
-    @include iconSize();
-    height: 0.5em;
-    margin-right: 0.3em;
+    @include flexCenter();
+  }
+  .plus-icon::before {
+    color: $grey;
+    font-size: 0.6em;
+    margin: 0;
+    margin-right: 0.5em;
   }
 }
 
@@ -65,7 +72,7 @@ p {
   }
   select {
     border: 1px solid $grey;
-    border-radius: 5px;
+    border-radius: $radius;
     padding: 3px 6px;
   }
   .custom-arrow {
