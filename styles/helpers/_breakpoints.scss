@@ -1,4 +1,5 @@
 //Breakpoint-mixin
+$ph-device: 425px;
 $sm-device: 576px;
 $md-device: 768px;
 $lg-device: 992px;
@@ -8,6 +9,11 @@ $xl-device: 1200px;
   @if $break == "xs" {
     //lowest breakpoint value
     @content;
+  } @else if $break == "ph" {
+    // phone
+    @media (min-width: $ph-device) {
+      @content;
+    }
   } @else if $break == "sm" {
     // phone
     @media (min-width: $sm-device) {
