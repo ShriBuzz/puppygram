@@ -28,7 +28,7 @@
   @include flexRow();
   @include flexCenter();
   border: 1.5px solid $light-grey;
-  border-radius: 5px;
+  border-radius: $radius;
   width: 80%;
   height: 2em;
   margin: 0.5em auto;
@@ -42,8 +42,11 @@
     color: $grey;
   }
   .search-icon {
-    @include iconSize();
+    color: $grey;
     margin-right: 0.5em;
+  }
+  .search-icon::before {
+    font-size: 0.9em;
   }
   @include mq(md) {
     width: 230px;
@@ -67,9 +70,9 @@
     @include flexCenter();
     cursor: pointer;
   }
-  .bell-icon {
-    @include iconSize();
+  .bell-icon::before {
     height: 1.2em;
+    margin: 0;
   }
   .upload-btn {
     padding: 5px 28px;
