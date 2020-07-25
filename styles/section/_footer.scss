@@ -6,7 +6,6 @@
 
   ul {
     width: 100%;
-    // margin: 0;
     @include flexRow();
     flex-wrap: wrap;
     @include centerBaseline();

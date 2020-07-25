@@ -1,8 +1,6 @@
 @import "../base/manifest", "../helpers/manifest";
 
 .nav-container {
-  // position: absolute;
-  // top: 0;
   @include flexRow();
   @include flexCenter();
   width: 100%;
@@ -37,6 +35,9 @@
     font-size: $sm;
     font-weight: 400;
     width: 50px;
+  }
+  .input-search:focus {
+    border: none;
   }
   ::placeholder {
     color: $grey;

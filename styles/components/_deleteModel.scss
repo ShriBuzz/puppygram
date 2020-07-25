@@ -6,13 +6,13 @@
 
 .delete-container {
   background-color: white;
+  border-radius: $radius;
   @include flexCenter();
   flex-direction: column;
   @include absoluteCenter();
   padding: 2em 2.5em;
   div {
     @include flexRow();
-    // @include spaceBetweenCenter();
   }
   p {
     font-size: $sm;

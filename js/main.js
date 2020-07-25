@@ -108,7 +108,7 @@ form.addEventListener("submit", (e) => {
   let number = secretId.value;
   let sum = 0;
   if (number.length == 0 || number.length > 6 || number.length < 4) {
-    alert("secret id of length 4-6 required");
+    alert("Input of length 4-6 digits required.");
     secretId.focus();
   } else {
     while (true) {
@@ -128,25 +128,7 @@ form.addEventListener("submit", (e) => {
       alert("Successfully submitted.");
       fadeOut(uploadView);
     } else {
-      alert("Failed to submit");
+      alert("Failed to submit.");
     }
   }
 });
-
-// const imgList = [
-//   "./assets/gallary/dog1.jpg",
-//   "./assets/gallary/dog2.jpg",
-//   "./assets/gallary/dog3.jpg",
-//   "./assets/gallary/dog4.jpg",
-//   "./assets/gallary/dog5.jpg",
-//   "./assets/gallary/dog6.jpg",
-//   "./assets/gallary/dog7.jpg",
-//   "./assets/gallary/dog8.jpg",
-//   "./assets/gallary/dog9.jpg",
-//   "./assets/gallary/dog10.jpg",
-//   "./assets/gallary/dog11.jpg",
-//   "./assets/gallary/dog12.jpg",
-//   "./assets/gallary/dog13.jpg",
-//   "./assets/gallary/dog14.jpg",
-//   "./assets/gallary/dog15.jpg",
-// ];

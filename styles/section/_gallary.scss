@@ -33,14 +33,12 @@
   height: auto;
 
   span::before {
-    // visibility: hidden;
     color: white;
     position: absolute;
     right: 10px;
     top: 10px;
     cursor: pointer;
     opacity: 0;
-    transition: 0.5s;
   }
   @include mq(xl) {
     height: 372px;

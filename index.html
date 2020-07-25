@@ -209,7 +209,7 @@
         </div>
         <p class="form-title">Upload your dog photo</p>
         <form id="uploadForm" action="/">
-          <div for="" class="row">
+          <div class="row">
             <label for="upload">Upload a photo</label>
             <div class="upload-container">
               <button class="choose-btn button-secondary">
@@ -220,6 +220,7 @@
                 id="file"
                 accept="image/"
                 style="display: none;"
+                required
               />
               <div class="upload-preview">
                 <img src="./assets/default.png" alt="" id="preview-img" />
@@ -232,6 +233,7 @@
               type="text"
               class="custom-input"
               placeholder="What breed is your dog"
+              required
             />
           </div>
           <div class="row">

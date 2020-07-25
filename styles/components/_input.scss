@@ -9,10 +9,18 @@ textarea {
   margin: 0.5em auto;
   padding: 4px 9px;
   color: black;
+  transition: 0.5s;
   ::placeholder {
     color: $light-grey;
   }
   @include mq(md) {
     width: 100% !important;
   }
+}
+
+input:focus,
+input:active,
+textarea:focus,
+textarea:active {
+  border: 1.5px solid $secondary;
 }
