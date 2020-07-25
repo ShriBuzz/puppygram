@@ -108,7 +108,7 @@ form.addEventListener("submit", (e) => {
   let number = secretId.value;
   let sum = 0;
   if (number.length == 0 || number.length > 6 || number.length < 4) {
-    alert("Input of length 4-6 digits required.");
+    alert("Secred User Id input of length 4-6 digits required.");
     secretId.focus();
   } else {
     while (true) {
