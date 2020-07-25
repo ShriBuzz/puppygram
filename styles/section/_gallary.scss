@@ -13,33 +13,88 @@
     color: $primary;
   }
   .image-grid {
-    margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     grid-gap: 1em;
+    margin-bottom: 1em;
+    @include mq(lg) {
+      grid-template-columns: repeat(3, minmax(250px, 1fr));
+    }
   }
-  //   .img-container {
-  //     width: 350px;
-  //     height: auto;
-  //   }
+}
 
-  .gallary-image {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-  }
-  p {
-    color: $grey;
-    font-weight: 700;
-    text-align: center;
-  }
-  .select-showing {
+.gallary-image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.loader-container {
+  @include flexCenter();
+
+  .loader-btn {
     @include flexRow();
     @include flexCenter();
-    padding-bottom: 1em;
+    padding: 0 0.6em;
+    cursor: pointer;
+    transition: 0.4s;
+  }
+  .loader-btn:hover {
     p {
-      font-weight: normal;
-      margin-right: 0.5em;
+      color: $primary;
     }
+  }
+  .plus-icon {
+    @include iconSize();
+    height: 0.5em;
+    margin-right: 0.3em;
+  }
+}
+
+p {
+  color: $grey;
+  font-weight: 700;
+  text-align: center;
+}
+.select-showing {
+  @include flexRow();
+  @include flexCenter();
+  padding-bottom: 1.2em;
+  .custom-select {
+    position: relative;
+  }
+  select {
+    border: 1px solid $grey;
+    border-radius: 5px;
+    padding: 3px 6px;
+  }
+  .custom-arrow {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 1em;
+    pointer-events: none;
+  }
+  .custom-arrow::before,
+  .custom-arrow::after {
+    --size: 0.4em;
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 50%;
+    top: 50%;
+    transform: translate(-65%, -50%);
+  }
+  .custom-arrow::before {
+    border-left: var(--size) solid transparent;
+    border-right: var(--size) solid transparent;
+    border-top: var(--size) solid black;
+  }
+  p {
+    font-size: $sm;
+    font-weight: normal;
+    margin-right: 0.5em;
   }
 }

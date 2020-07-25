@@ -41,7 +41,12 @@
         <h1>Trending Now</h1>
         <div class="image-grid">
           <div class="img-container">
-            <img src="./assets/gallary/dog1.jpg" alt="" class="gallary-image" />
+            <img
+              src="./assets/gallary/dog1.jpg"
+              alt=""
+              class="gallary-image"
+              onclick=""
+            />
           </div>
           <div class="img-container">
             <img src="./assets/gallary/dog2.jpg" alt="" class="gallary-image" />
@@ -110,14 +115,23 @@
             />
           </div>
         </div>
-        <p>Load More</p>
+        <div class="loader-container">
+          <div class="loader-btn">
+            <img src="./assets/icons/plus.png" alt="" class="plus-icon" />
+            <p>Load More</p>
+          </div>
+        </div>
+
         <div class="select-showing">
           <p>Showing</p>
-          <select name="showing" id="showing">
-            <option value="trending">Trending</option>
-            <option value="trending">Trending</option>
-            <option value="trending">Trending</option>
-          </select>
+          <div class="custom-select">
+            <select name="showing" id="showing">
+              <option value="trending">Trending</option>
+              <option value="trending">Trending</option>
+              <option value="trending">Trending</option>
+            </select>
+            <span class="custom-arrow"></span>
+          </div>
         </div>
       </div>
     </section>
@@ -126,13 +140,10 @@
     <!-- Footer section  -->
     <div class="footer-nav">
       <ul>
-        <li class="bullet-point">About Us</li>
-        <!-- <span>.</span> -->
-        <li class="bullet-point">Blog</li>
-        <!-- <span>.</span> -->
-        <li class="bullet-point">Contact Us</li>
-        <!-- <span>.</span> -->
-        <li>FAQ</li>
+        <li class="bullet-point"><a href="#">About Us</a></li>
+        <li class="bullet-point"><a href="#">Blog</a></li>
+        <li class="bullet-point"><a href="#">Contact Us</a></li>
+        <li><a href="#">FAQ</a></li>
       </ul>
     </div>
     <div class="footer-copyright">
@@ -142,5 +153,32 @@
       </div>
       <p class="copyright-text">Copyright 2020 - Puppygram Inc.</p>
     </div>
+    <!-- Footer section end  -->
+
+    <!-- Single image popup  -->
+    <div class="popup">
+      <div class="main-container">
+        <img src="./assets/gallary/dog5.jpg" alt="" class="card-image" />
+        <div class="card">
+          <div class="card-text">
+            <p class="title">Title Here</p>
+            <p class="description">
+              Description here should not be <br />
+              lorem epsum.
+            </p>
+          </div>
+          <div class="card-stats">
+            <img src="./assets/logo/logo-line.png" alt="" />
+            <div class="column">
+              <p class="stat-text">1,294</p>
+              <p class="stat-text">Paw-fives</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Image popup end  -->
+
+    <script src="js/main.js"></script>
   </body>
 </html>

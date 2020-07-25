@@ -7,15 +7,21 @@
   @include flexCenter();
   width: 100%;
   background-color: $nav-grey;
-  padding: 0.4em 0;
+  padding: 1em 0;
+  @include mq(md) {
+    padding: 0.4em 0;
+  }
 }
 
 .container {
-  @include flexRow();
-  // flex-wrap: wrap;
-  @include flexCenter();
-  justify-content: space-between;
-  width: 80%;
+  display: block;
+  width: 100%;
+  @include mq(md) {
+    @include flexRow();
+    @include flexCenter();
+    justify-content: space-between;
+    width: 80%;
+  }
 }
 
 .search-container {
@@ -23,8 +29,9 @@
   @include flexCenter();
   border: 1.5px solid $light-grey;
   border-radius: 5px;
-  width: 230px;
+  width: 80%;
   height: 2em;
+  margin: 0.5em auto;
   color: black;
   .input-search {
     font-size: $sm;
@@ -38,12 +45,21 @@
     @include iconSize();
     margin-right: 0.5em;
   }
+  @include mq(md) {
+    width: 230px;
+    margin: 0 10px;
+  }
 }
 
 .utils-container {
   @include flexRow();
   @include spaceBetweenCenter();
-  width: 230px;
+  width: 80%;
+  margin: 0 auto;
+  @include mq(md) {
+    width: 230px;
+    margin: 0;
+  }
   .icon-container {
     border-radius: 50%;
     width: $xl;
@@ -67,6 +83,9 @@
     color: $primary;
     font-size: $sm;
     font-weight: 600;
+    .user-initials {
+      color: $primary;
+    }
   }
 }
 

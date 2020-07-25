@@ -5,22 +5,26 @@
   @include flexCenter();
 
   ul {
-    width: 40%;
+    width: 100%;
     // margin: 0;
     @include flexRow();
     flex-wrap: wrap;
     @include centerBaseline();
+    @include mq(xl) {
+      width: 40%;
+    }
   }
   li {
     color: $primary;
     @include flexCenter();
     @include centerBaseline();
+    a {
+      color: $primary;
+    }
   }
   .bullet-point::after {
     content: "•";
-    // font-size: 3em;
-    // vertical-align: middle;
-    padding: 0 0.8em;
+    padding: 0 2.5em;
   }
 }
 
@@ -30,7 +34,8 @@
   @include flexCenter();
   .copyright-text {
     font-size: $sm;
-    color: $light-grey;
+    color: $grey;
+    font-weight: normal;
     margin-left: 1em;
   }
 }
