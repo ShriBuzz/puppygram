@@ -1,40 +1,40 @@
 @import "../base/manifest", "../helpers/manifest";
 
 .nav-container {
+  width: 100%;
+  padding: 1em 0;
   @include flexRow();
   @include flexCenter();
-  width: 100%;
   background-color: $nav-grey;
-  padding: 1em 0;
   @include mq(md) {
     padding: 0.4em 0;
   }
 }
 
 .container {
-  display: block;
   width: 100%;
+  display: block;
   @include mq(md) {
+    width: 80%;
     @include flexRow();
     @include flexCenter();
     justify-content: space-between;
-    width: 80%;
   }
 }
 
 .search-container {
-  @include flexRow();
-  @include flexCenter();
-  border: 1.5px solid $light-grey;
-  border-radius: $radius;
   width: 80%;
   height: 2em;
-  margin: 0.5em auto;
   color: black;
+  margin: 0.5em auto;
+  @include flexRow();
+  @include flexCenter();
+  border-radius: $radius;
+  border: 1.5px solid $light-grey;
   .input-search {
+    width: 50px;
     font-size: $sm;
     font-weight: 400;
-    width: 50px;
   }
   .input-search:focus {
     border: none;
@@ -47,8 +47,8 @@
     margin-right: 0.5em;
   }
   .search-icon::before {
-    font-size: 0.9em;
     margin: 0;
+    font-size: 0.9em;
   }
   @include mq(md) {
     width: 230px;
@@ -57,39 +57,39 @@
 }
 
 .utils-container {
-  @include flexRow();
-  @include spaceBetweenCenter();
   width: 80%;
   margin: 0 auto;
+  @include flexRow();
+  @include spaceBetweenCenter();
   @include mq(md) {
-    width: 230px;
     margin: 0;
+    width: 230px;
   }
   .icon-container {
-    border-radius: 50%;
     width: $xl;
     height: $xl;
-    @include flexCenter();
     cursor: pointer;
+    border-radius: 50%;
+    @include flexCenter();
   }
   .bell-icon::before {
-    height: 1.2em;
     margin: 0;
+    height: 1.2em;
   }
   .upload-btn {
     padding: 5px 28px;
   }
   .avatar {
     @include flexCenter;
-    border-radius: 50%;
     width: $xl;
     height: $xl;
-    background-color: $light-grey;
-    color: $primary;
     font-size: $sm;
-    font-weight: 600;
+    color: $primary;
     cursor: pointer;
     transition: 0.6s;
+    font-weight: 600;
+    border-radius: 50%;
+    background-color: $light-grey;
     .user-initials {
       color: $primary;
     }

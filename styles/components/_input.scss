@@ -2,13 +2,13 @@
 
 .custom-input,
 textarea {
-  border: 1.5px solid $light-grey;
+  height: 2em;
+  color: black;
+  padding: 4px 9px;
+  margin: 0.5em auto;
   border-radius: $radius;
   width: 100% !important;
-  height: 2em;
-  margin: 0.5em auto;
-  padding: 4px 9px;
-  color: black;
+  border: 1.5px solid $light-grey;
   transition: 0.5s;
   ::placeholder {
     color: $light-grey;

@@ -5,24 +5,26 @@
 
 @mixin flexCenter {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
 
 @mixin spaceBetweenCenter {
-  justify-content: space-between;
+  display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 @mixin spaceBetweenBaseline {
-  justify-content: space-between;
+  display: flex;
   align-items: baseline;
+  justify-content: space-between;
 }
 
 @mixin centerBaseline {
   display: flex;
-  justify-content: center;
   align-items: baseline;
+  justify-content: center;
 }
 
 @mixin absoluteCenter {

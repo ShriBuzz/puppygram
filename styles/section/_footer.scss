@@ -6,8 +6,8 @@
 
   ul {
     width: 100%;
-    @include flexRow();
     flex-wrap: wrap;
+    @include flexRow();
     @include centerBaseline();
     @include mq(xl) {
       width: 40%;
@@ -35,9 +35,9 @@
   @include flexRow();
   @include flexCenter();
   .copyright-text {
-    font-size: $sm;
     color: $grey;
-    font-weight: normal;
+    font-size: $sm;
     margin-left: 1em;
+    font-weight: normal;
   }
 }

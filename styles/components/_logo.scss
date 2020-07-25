@@ -5,10 +5,10 @@
   @include flexCenter();
 
   .logo-text {
+    margin: 0;
+    font-size: $md;
     color: $primary;
     font-weight: bolder;
-    font-size: $md;
-    margin: 0;
     @include mq(md) {
       margin: 18px 0;
     }
@@ -17,18 +17,18 @@
     }
   }
   .logo-img {
-    margin-left: 0.6em;
     height: 2em;
+    margin-left: 0.6em;
     object-fit: contain;
   }
   .logo-text-sm {
-    font-weight: bolder;
     font-size: $sm;
     color: $primary;
+    font-weight: bolder;
   }
   .logo-img-sm {
-    margin-left: 0.6em;
     height: 1.5em;
+    margin-left: 0.6em;
     object-fit: contain;
   }
 }

@@ -1,12 +1,12 @@
 @import "../helpers/variables";
 
 button {
-  background-color: $secondary;
   color: white;
   font-size: $sm;
-  border-radius: $radius;
   cursor: pointer;
   transition: 0.5s;
+  border-radius: $radius;
+  background-color: $secondary;
 }
 
 button:hover {
@@ -15,12 +15,12 @@ button:hover {
 }
 
 .button-secondary {
-  background-color: $light-grey;
-  color: $primary;
   font-size: $sm;
-  border-radius: $radius;
+  color: $primary;
   cursor: pointer;
   transition: 0.5s;
+  border-radius: $radius;
+  background-color: $light-grey;
 }
 
 .button-secondary:hover {

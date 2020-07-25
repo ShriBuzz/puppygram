@@ -5,48 +5,48 @@
 }
 
 .form-container {
-  width: auto;
-  @include absoluteCenter();
   top: 46%;
+  width: auto;
   display: flex;
+  margin: 2em 0;
+  padding: 1em 3em;
   flex-direction: column;
+  border-radius: $radius;
   justify-content: center;
   align-items: flex-start;
-  border-radius: $radius;
+  @include absoluteCenter();
   background-color: white;
-  padding: 1em 3em;
-  margin: 2em 0;
   @include mq(md) {
-    @include absoluteCenter();
-    width: 500px;
     margin: 0;
+    width: 500px;
     padding: 3em 5em;
+    @include absoluteCenter();
   }
   .form-title {
+    margin-top: 0;
     font-size: $lg;
     color: $primary;
-    margin-top: 0;
     @include mq(md) {
       font-size: $xl;
     }
   }
   form {
+    width: 100%;
     display: flex;
     flex-direction: column;
-    width: 100%;
   }
 }
 
 .upload-preview {
   --size: 50px;
+  margin-left: 0.5em;
   width: var(--size);
   height: var(--size);
   border: 1px solid $grey;
-  margin-left: 0.5em;
   img {
+    object-fit: cover;
     width: var(--size);
     height: var(--size);
-    object-fit: cover;
   }
 }
 
@@ -65,10 +65,10 @@
 }
 
 .row {
-  flex-direction: column;
-  @include spaceBetweenBaseline();
   text-align: left;
   margin-bottom: 0.4em;
+  flex-direction: column;
+  @include spaceBetweenBaseline();
   @include mq(md) {
     @include flexRow();
     margin-bottom: 1em;
@@ -100,15 +100,15 @@
 }
 
 .black::before {
-  color: $primary;
-  font-size: 20px;
   margin: 0;
+  font-size: 20px;
+  color: $primary;
 }
 
 .upload-position {
-  position: absolute;
   top: 20px;
   right: 16px;
+  position: absolute;
   @include mq(md) {
     top: 34px;
     right: 40px;
