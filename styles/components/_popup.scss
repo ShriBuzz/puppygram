@@ -24,6 +24,7 @@
 }
 
 .card {
+  width: 100%;
   @include flexRow();
   font-size: $xs;
   background-color: white;
@@ -54,8 +55,9 @@
 }
 
 .card-text {
+  width: 60%;
   position: relative;
-  padding: 0.5em 1em;
+  padding: 0.5em 1.3em;
   .title {
     font-weight: 700;
     margin: 0;
@@ -65,11 +67,11 @@
     width: 180px;
     border-right: 1px solid $grey;
     padding-right: 0.5em;
-    @include mq(xl) {
-      width: 275px;
-    }
     @include mq(ph) {
       width: 195px;
+    }
+    @include mq(xl) {
+      width: 100%;
     }
   }
 }

@@ -3,6 +3,11 @@
 .gallary-body {
   @include flexCenter();
   width: 100%;
+  p {
+    color: $grey;
+    font-weight: 700;
+    text-align: center;
+  }
 }
 
 .gallary-container {
@@ -23,10 +28,36 @@
   }
 }
 
+.img-container {
+  position: relative;
+  height: auto;
+
+  span::before {
+    // visibility: hidden;
+    color: white;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+    opacity: 0;
+    transition: 0.5s;
+  }
+  @include mq(xl) {
+    height: 372px;
+  }
+}
+
+.img-container:hover {
+  span::before {
+    opacity: 1;
+  }
+}
+
 .gallary-image {
   height: 100%;
   width: 100%;
   object-fit: cover;
+  cursor: pointer;
 }
 
 .loader-container {
@@ -58,15 +89,11 @@
   }
 }
 
-p {
-  color: $grey;
-  font-weight: 700;
-  text-align: center;
-}
 .select-showing {
   @include flexRow();
   @include flexCenter();
   padding-bottom: 1.2em;
+
   .custom-select {
     position: relative;
   }
