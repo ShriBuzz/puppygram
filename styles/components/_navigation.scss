@@ -47,6 +47,7 @@
   }
   .search-icon::before {
     font-size: 0.9em;
+    margin: 0;
   }
   @include mq(md) {
     width: 230px;

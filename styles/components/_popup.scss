@@ -99,11 +99,21 @@
   animation: fadeIn 0.4s ease-in 1 forwards;
 }
 
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+  }
+}
+
+.fade-out {
+  opacity: 1;
+  animation: fadeOut 0.4s ease-out 1 forwards;
+}
+
 .close-btn {
   width: 20px;
   height: 20px;
-  position: absolute;
-  right: -30px;
+
   cursor: pointer;
 
   .close-icon::before {
@@ -111,4 +121,9 @@
     font-size: 20px;
     margin: 0;
   }
+}
+
+.position-in-detail {
+  position: absolute;
+  right: -30px;
 }

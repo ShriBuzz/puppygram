@@ -12,4 +12,7 @@ textarea {
   ::placeholder {
     color: $light-grey;
   }
+  @include mq(md) {
+    width: 100% !important;
+  }
 }

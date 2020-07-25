@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PuppyGram</title>
     <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/vendors/flaticon/flaticon.css" />
   </head>
   <body>
     <!-- Nav bar -->
@@ -15,17 +16,13 @@
           <img src="./assets/logo/logo.png" alt="logo" class="logo-img" />
         </div>
         <div class="search-container">
-          <img
-            src="./assets/icons/search.png"
-            alt="search"
-            class="search-icon"
-          />
+          <span class="search-icon flaticon-search"></span>
           <input type="text" placeholder="Search" class="input-search" />
         </div>
         <div class="utils-container">
           <button class="upload-btn">Upload</button>
           <div class="icon-container">
-            <img src="./assets/icons/bell.png" alt="alert" class="bell-icon" />
+            <span class="bell-icon flaticon-bell"></span>
           </div>
           <div class="avatar">
             <p class="user-initials">MB</p>
@@ -117,7 +114,7 @@
         </div>
         <div class="loader-container">
           <div class="loader-btn">
-            <img src="./assets/icons/plus.png" alt="" class="plus-icon" />
+            <span class="plus-icon flaticon-plus"></span>
             <p>Load More</p>
           </div>
         </div>
@@ -156,9 +153,19 @@
     <!-- Footer section end  -->
 
     <!-- Single image popup  -->
-    <div class="popup">
+    <div class="popup" id="detail-view">
       <div class="main-container">
-        <img src="./assets/gallary/dog5.jpg" alt="" class="card-image" />
+        <div class="close-btn position-in-detail" id="detail-close">
+          <span class="close-icon flaticon-close"></span>
+        </div>
+        <div class="current-img">
+          <img
+            src="./assets/gallary/dog2.jpg"
+            alt="selected image"
+            class="card-image"
+          />
+        </div>
+
         <div class="card">
           <div class="card-text">
             <p class="title">Title Here</p>
@@ -179,6 +186,65 @@
     </div>
     <!-- Image popup end  -->
 
+    <!-- upload form start  -->
+    <div class="popup" id="upload-view">
+      <div class="form-container">
+        <div class="close-btn upload-position" id="upload-close">
+          <span class="black flaticon-close"></span>
+        </div>
+        <p class="form-title">Upload your dog photo</p>
+        <form action="">
+          <div for="" class="row">
+            <label for="upload">Upload a photo</label>
+            <div class="upload-container">
+              <button
+                class="choose-btn button-secondary"
+                onclick="document.getElementById('file').click()"
+              >
+                Select Photo
+              </button>
+              <div class="upload-preview">
+                <img src="./assets/default.png" alt="" id="preview-img" />
+              </div>
+            </div>
+
+            <input
+              type="file"
+              id="file"
+              accept="image/"
+              style="display: none;"
+            />
+          </div>
+          <div class="row">
+            <label for="title">Title</label>
+            <input
+              type="text"
+              class="custom-input"
+              placeholder="What breed is your dog"
+            />
+          </div>
+          <div class="row">
+            <label for="description" class="description-text"
+              >Description</label
+            >
+            <textarea
+              name="description"
+              id="desc"
+              cols="30"
+              rows="10"
+            ></textarea>
+          </div>
+          <div class="row">
+            <label for="secretId">Secret User ID</label>
+            <input type="text" class="custom-input" placeholder="# # # # # #" />
+          </div>
+          <button class="submit-btn">Submit</button>
+        </form>
+      </div>
+    </div>
+    <!-- Upload form end  -->
+
     <script src="js/main.js"></script>
+    <script src="js/utility.js"></script>
   </body>
 </html>

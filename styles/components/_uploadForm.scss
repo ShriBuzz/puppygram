@@ -1,0 +1,115 @@
+@import "../base/manifest", "../helpers/manifest";
+
+#upload-view {
+  visibility: hidden;
+}
+
+.form-container {
+  width: auto;
+  @include absoluteCenter();
+  top: 46%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  border-radius: $radius;
+  background-color: white;
+  padding: 1em 3em;
+  margin: 2em 0;
+  @include mq(md) {
+    @include absoluteCenter();
+    width: 500px;
+    margin: 0;
+    padding: 3em 5em;
+  }
+  .form-title {
+    font-size: $lg;
+    color: $primary;
+    margin-top: 0;
+    @include mq(md) {
+      font-size: $xl;
+    }
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+.upload-preview {
+  --size: 50px;
+  width: var(--size);
+  height: var(--size);
+  border: 1px solid $grey;
+  margin-left: 0.5em;
+  img {
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.upload-container {
+  width: 108%;
+  @include flexRow();
+  @include spaceBetweenCenter();
+  @include mq(md) {
+    width: 107%;
+  }
+}
+
+.choose-btn {
+  width: 190px;
+  height: 30px;
+}
+
+.row {
+  flex-direction: column;
+  @include spaceBetweenBaseline();
+  text-align: left;
+  margin-bottom: 0.4em;
+  @include mq(md) {
+    @include flexRow();
+    margin-bottom: 1em;
+  }
+  label,
+  input {
+    width: auto;
+    @include mq(md) {
+      width: 300px;
+    }
+  }
+  textarea {
+    height: 100px;
+  }
+}
+
+.description-text::after {
+  content: "(Optional)";
+  display: block;
+  font-size: $sm;
+}
+
+.submit-btn {
+  height: 40px;
+}
+
+.flaticon-close::before {
+  margin: 0;
+}
+
+.black::before {
+  color: $primary;
+  font-size: 20px;
+  margin: 0;
+}
+
+.upload-position {
+  position: absolute;
+  top: 20px;
+  right: 16px;
+  @include mq(md) {
+    top: 34px;
+    right: 40px;
+  }
+}
