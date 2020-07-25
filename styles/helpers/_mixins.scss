@@ -25,7 +25,9 @@
   align-items: baseline;
 }
 
-@mixin iconSize {
-  height: 1em;
-  object-fit: contain;
+@mixin absoluteCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
