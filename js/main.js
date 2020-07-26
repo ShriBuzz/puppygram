@@ -104,6 +104,11 @@ inputImage.addEventListener("change", function () {
   }
 });
 
+const resetForm = () => {
+  form.reset();
+  previewImage.setAttribute("src", "./assets/default.png");
+};
+
 // Secret id validation
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -129,6 +134,7 @@ form.addEventListener("submit", (e) => {
     if (sum === 7) {
       addImage(uploadSrc);
       alert("Successfully submitted.");
+      resetForm();
       fadeOut(uploadView);
     } else {
       alert("Failed to submit.");
